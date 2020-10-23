@@ -1,0 +1,313 @@
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////
+///////////// Base Details
+//////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+:root {
+  --color-one: black;
+  --color-two: white;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  background-color: var(--color-two);
+  color: var(--color-one);
+}
+
+h2 {
+  text-align: center;
+  margin-top: 3vh;
+  font-size: 3em;
+  color: var(--color-one);
+}
+
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////
+///////////// Section One Details
+//////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.section-one {
+  position: relative;
+  height: 100vh;
+  background-image: url(https://i.ibb.co/rtXG6rn/pexels-negative-space-160107.jpg);
+  // background-color: var(--new-color-two);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  // background-color: rgba(25, 8, 73, 0.7);
+  // background-color: rgba(78, 25, 229, 0.7);
+  // background-color: var(--new-color-five-trans);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.section-one-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  h1 {
+    // color: white;
+    color: var(--color-two);
+    // margin: 0 0.3em 0 0.2em;
+    font-size: 2em;
+  }
+  h3 {
+    color: var(--color-two);
+    text-align: left;
+    // margin: 0 0.3em;
+    margin-top: 1.2em;
+    span {
+      // color: #b1b1b1;
+      color: var(--color-two);
+    }
+  }
+}
+
+.header-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  width: 100%;
+  // margin: 3em 0 6em 0;
+  a {
+
+    -webkit-tap-highlight-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 4em;
+    width: 60%;
+    border-radius: 60px;
+    margin-right: 0.3em;
+    margin-bottom: 1em;
+    font-weight: bold;
+    font-size: 1em;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    color: var(--color-two);
+    background-color: transparent;
+    border: 0.2em solid var(--color-two);
+    // box-shadow: 0px 0px 10px var(--new-color-one);
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+    &:hover {
+      color: var(--color-one);
+      background-color: var(--color-two);
+      // box-shadow: 0px 3px 10px var(--new-color-four);
+      border: 0.2em solid var(--color-two);
+    }
+  }
+}
+
+.empty {
+  height: 15%;
+  width: 100%;
+ }
+
+.text { 
+  margin: 10vh 2em 0 2em;
+}
+
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////
+///////////// Section Two Details
+//////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.section-two {
+  width: 100%;
+  // height: 40vh;
+  height: auto;
+  // background-color: #f7f7f7;
+  display: inline-block;
+  text-align: center;
+  p {
+    font-size: 0.9em;
+    margin: 0.4em 2em 1em 2em;
+    text-align: center;
+    line-height: 1.2em;
+  }
+  h3 {
+    // color: var(--new-color-two);
+    font-size: 1.2em;
+  }
+}
+
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////
+///////////// Section Three Details
+//////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.section-three {
+  // background-color:  #f7f7f7;
+  width: 100%;
+  height: auto;
+}
+
+.projects-container {
+  margin: 1em 2em;
+  display: grid;
+  justify-content: center;
+
+  align-items: center;
+  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+}
+
+
+.project-card {
+  margin-top: 2em;
+  margin: 2em 1em 0 1em;
+  // min-width: 300px;
+  // max-width: 350px;
+  // padding-bottom: 30%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-two);
+  box-shadow: 0px 0px 12px var(--color-one);
+  &:nth-last-of-type(1) {
+    margin-right: 0;
+  }
+  .thumbnail {
+    width: 100%;
+    height: 10em;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.thumbnail-placeholder {
+  min-height: 12em;
+  min-width: 6em;
+  background-color: black;
+}
+
+.card-details {
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  h3, h4 {
+    // height: 15%;
+    color: var(--color-one)
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+  p {
+    font-size: 1em;
+    height: 55%;
+    line-height: 1em;
+    margin-bottom: 1em;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1em;
+  }
+}
+
+.card-button-container {
+  height: 3em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  // margin-bottom: 0.3em;
+  a {
+    line-height: 1em;
+    display: inline-block;
+    text-decoration: none;
+    // padding: 0.3em 50%;
+    width: 50%;
+    height: 100%;
+    font-weight: bold;
+    color: var(--color-two);
+    // background-color:#4e19e5;
+    background-color:var(--color-one);
+    // border-radius: 8px;
+    // box-shadow: 0px 0px 10px grey;
+    // border: 3px solid #4e19e5;
+    // border: 3px solid var(--color-one);
+    border-right: 1px solid white;
+    transition: all 0.2s ease;
+    &:nth-last-of-type(1) {
+      border: 0;
+    }
+    &:hover {
+      background-color: var(--color-two);
+      color: var(--color-one);
+    }
+  }
+}
+
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////
+///////////// Section Four Details
+//////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+
+
+
+
+
+
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////
+///////////// Media Queries
+//////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media only screen and (min-width: 600px) {
+  // .section-one-container {
+  //   flex-direction: row;
+  // }
+  // .header-button-container {
+  //   height: 100%;
+  // }
+}
+
+@media only screen and (min-with: 600px), only screen and (max-height: 450px) {
+  .section-one-container {
+    flex-direction: row;
+  }
+  .header-button-container {
+    height: 100%;
+  }
+}

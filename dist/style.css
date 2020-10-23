@@ -1,0 +1,257 @@
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////
+///////////// Base Details
+//////////////////////////////////////////////////////////////////////////////////////////
+*/
+:root {
+  --color-one: black;
+  --color-two: white;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  font-family: "Space Mono", monospace;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  background-color: var(--color-two);
+  color: var(--color-one);
+}
+
+h2 {
+  text-align: center;
+  margin-top: 3vh;
+  font-size: 3em;
+  color: var(--color-one);
+}
+
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////
+///////////// Section One Details
+//////////////////////////////////////////////////////////////////////////////////////////
+*/
+.section-one {
+  position: relative;
+  height: 100vh;
+  background-image: url(https://i.ibb.co/rtXG6rn/pexels-negative-space-160107.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-one-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.section-one-container h1 {
+  color: var(--color-two);
+  font-size: 2em;
+}
+.section-one-container h3 {
+  color: var(--color-two);
+  text-align: left;
+  margin-top: 1.2em;
+}
+.section-one-container h3 span {
+  color: var(--color-two);
+}
+
+.header-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  width: 100%;
+}
+.header-button-container a {
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  height: 4em;
+  width: 60%;
+  border-radius: 60px;
+  margin-right: 0.3em;
+  margin-bottom: 1em;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  color: var(--color-two);
+  background-color: transparent;
+  border: 0.2em solid var(--color-two);
+}
+.header-button-container a:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+.header-button-container a:hover {
+  color: var(--color-one);
+  background-color: var(--color-two);
+  border: 0.2em solid var(--color-two);
+}
+
+.empty {
+  height: 15%;
+  width: 100%;
+}
+
+.text {
+  margin: 10vh 2em 0 2em;
+}
+
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////
+///////////// Section Two Details
+//////////////////////////////////////////////////////////////////////////////////////////
+*/
+.section-two {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  text-align: center;
+}
+.section-two p {
+  font-size: 0.9em;
+  margin: 0.4em 2em 1em 2em;
+  text-align: center;
+  line-height: 1.2em;
+}
+.section-two h3 {
+  font-size: 1.2em;
+}
+
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////
+///////////// Section Three Details
+//////////////////////////////////////////////////////////////////////////////////////////
+*/
+.section-three {
+  width: 100%;
+  height: auto;
+}
+
+.projects-container {
+  margin: 1em 2em;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card {
+  margin-top: 2em;
+  margin: 2em 1em 0 1em;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-two);
+  box-shadow: 0px 0px 12px var(--color-one);
+}
+.project-card:nth-last-of-type(1) {
+  margin-right: 0;
+}
+.project-card .thumbnail {
+  width: 100%;
+  height: 10em;
+  overflow: hidden;
+}
+.project-card .thumbnail img {
+  max-width: 100%;
+}
+
+.thumbnail-placeholder {
+  min-height: 12em;
+  min-width: 6em;
+  background-color: black;
+}
+
+.card-details {
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.card-details h3, .card-details h4 {
+  color: var(--color-one);
+}
+.card-details h3 {
+  font-size: 1.2em;
+}
+.card-details p {
+  font-size: 1em;
+  height: 55%;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+.card-details ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1em;
+}
+
+.card-button-container {
+  height: 3em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.card-button-container a {
+  line-height: 1em;
+  display: inline-block;
+  text-decoration: none;
+  width: 50%;
+  height: 100%;
+  font-weight: bold;
+  color: var(--color-two);
+  background-color: var(--color-one);
+  border-right: 1px solid white;
+  transition: all 0.2s ease;
+}
+.card-button-container a:nth-last-of-type(1) {
+  border: 0;
+}
+.card-button-container a:hover {
+  background-color: var(--color-two);
+  color: var(--color-one);
+}
+
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////
+///////////// Section Four Details
+//////////////////////////////////////////////////////////////////////////////////////////
+*/
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////
+///////////// Media Queries
+//////////////////////////////////////////////////////////////////////////////////////////
+*/
+@media only screen and (min-with: 600px), only screen and (max-height: 450px) {
+  .section-one-container {
+    flex-direction: row;
+  }
+
+  .header-button-container {
+    height: 100%;
+  }
+}
